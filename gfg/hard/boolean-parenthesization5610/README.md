@@ -37,7 +37,7 @@ Explaination: The expression evaluates to true in 2 ways: ((T^F)|F) and (T^(F|F)
 **Language:** Python  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-06T15:40:36.076Z  
+**Submitted:** 2026-09-06T15:43:36.083Z  
 
 ```py
 class Solution:
