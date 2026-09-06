@@ -33,22 +33,26 @@ Output: ["()"]
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms  
-**Memory:** 54 MB  
-**Submitted:** 2026-09-06T16:01:35.092Z  
+**Runtime:** 2 ms (beats 44.65%)  
+**Memory:** 55.7 MB (beats 70.39%)  
+**Submitted:** 2026-09-06T16:01:40.909Z  
 
 ```ts
-function rob(nums: number[]): number {
-    let prev2 = 0;
-    let prev1 = 0;
+function generateParenthesis(n: number): string[] {
+    const result: string[] = [];
 
-    for (const money of nums) {
-        const current = Math.max(prev1, prev2 + money);
-        prev2 = prev1;
-        prev1 = current;
+    function backtrack(s: string, open: number, close: number) {
+        if (s.length === 2 * n) {
+            result.push(s);
+            return;
+        }
+
+        if (open < n) backtrack(s + "(", open + 1, close);
+        if (close < open) backtrack(s + ")", open, close + 1);
     }
 
-    return prev1;
+    backtrack("", 0, 0);
+    return result;
 }
 ```
 
