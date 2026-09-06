@@ -48,9 +48,9 @@ Output: 3
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 39 ms  
-**Memory:** 53.1 MB  
-**Submitted:** 2026-09-06T15:59:44.778Z  
+**Runtime:** 62 ms (beats 63.05%)  
+**Memory:** 59.1 MB (beats 75.90%)  
+**Submitted:** 2026-09-06T15:59:50.576Z  
 
 ```ts
 function numIslands(grid: string[][]): number {
