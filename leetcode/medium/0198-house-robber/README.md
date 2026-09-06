@@ -40,9 +40,9 @@ Total amount you can rob = 2 + 9 + 1 = 12.
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms  
-**Memory:** 55.5 MB  
-**Submitted:** 2026-09-06T15:58:52.133Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 54.1 MB (beats 83.96%)  
+**Submitted:** 2026-09-06T15:58:57.132Z  
 
 ```ts
 function rob(nums: number[]): number {
