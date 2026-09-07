@@ -37,9 +37,9 @@ Output: 2
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms  
-**Memory:** 54.6 MB  
-**Submitted:** 2026-09-07T14:06:41.381Z  
+**Runtime:** 21 ms (beats 36.49%)  
+**Memory:** 65.7 MB (beats 29.28%)  
+**Submitted:** 2026-09-07T14:06:47.930Z  
 
 ```ts
 function subarraySum(nums: number[], k: number): number {
