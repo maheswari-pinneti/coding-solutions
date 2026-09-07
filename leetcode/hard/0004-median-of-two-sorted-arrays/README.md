@@ -42,9 +42,9 @@ Explanation: merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5.
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms  
-**Memory:** 55 MB  
-**Submitted:** 2026-09-07T14:17:52.132Z  
+**Runtime:** 1 ms (beats 99.12%)  
+**Memory:** 59 MB (beats 74.10%)  
+**Submitted:** 2026-09-07T14:17:56.892Z  
 
 ```ts
 function findMedianSortedArrays(
