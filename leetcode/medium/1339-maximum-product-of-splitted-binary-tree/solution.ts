@@ -13,25 +13,31 @@
  */
 
 function maxProduct(root: TreeNode | null): number {
-    const MOD = 1_000_000_007;
-    const sums: number[] = [];
+    const MOD = 1000000007n;
+    const sums: bigint[] = [];
 
-    function dfs(node: TreeNode | null): number {
-        if (!node) return 0;
+    function dfs(node: TreeNode | null): bigint {
+        if (!node) return 0n;
 
-        const sum = node.val + dfs(node.left) + dfs(node.right);
+        const sum =
+            BigInt(node.val) +
+            dfs(node.left) +
+            dfs(node.right);
+
         sums.push(sum);
-
         return sum;
     }
 
     const total = dfs(root);
-
-    let max = 0;
+    let max = 0n;
 
     for (const sum of sums) {
-        max = Math.max(max, sum * (total - sum));
+        const product = sum * (total - sum);
+
+        if (product > max) {
+            max = product;
+        }
     }
 
-    return max % MOD;
+    return Number(max % MOD);
 }
