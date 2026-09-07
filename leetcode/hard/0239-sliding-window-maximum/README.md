@@ -46,9 +46,9 @@ Output: [1]
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms  
-**Memory:** 55.6 MB  
-**Submitted:** 2026-09-07T14:23:38.379Z  
+**Runtime:** 27 ms (beats 80.06%)  
+**Memory:** 87.7 MB (beats 48.10%)  
+**Submitted:** 2026-09-07T14:23:45.000Z  
 
 ```ts
 function maxSlidingWindow(nums: number[], k: number): number[] {
