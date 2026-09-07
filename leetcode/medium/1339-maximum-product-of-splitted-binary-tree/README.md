@@ -41,8 +41,8 @@ Explanation: Remove the red edge and get 2 binary trees with sum 15 and 6.Their 
 
 **Language:** TypeScript  
 **Runtime:** 0 ms  
-**Memory:** 53.6 MB  
-**Submitted:** 2026-09-07T14:12:47.798Z  
+**Memory:** 55.2 MB  
+**Submitted:** 2026-09-07T14:13:43.232Z  
 
 ```ts
 /**
@@ -60,27 +60,33 @@ Explanation: Remove the red edge and get 2 binary trees with sum 15 and 6.Their 
  */
 
 function maxProduct(root: TreeNode | null): number {
-    const MOD = 1_000_000_007;
-    const sums: number[] = [];
+    const MOD = 1000000007n;
+    const sums: bigint[] = [];
 
-    function dfs(node: TreeNode | null): number {
-        if (!node) return 0;
+    function dfs(node: TreeNode | null): bigint {
+        if (!node) return 0n;
 
-        const sum = node.val + dfs(node.left) + dfs(node.right);
+        const sum =
+            BigInt(node.val) +
+            dfs(node.left) +
+            dfs(node.right);
+
         sums.push(sum);
-
         return sum;
     }
 
     const total = dfs(root);
-
-    let max = 0;
+    let max = 0n;
 
     for (const sum of sums) {
-        max = Math.max(max, sum * (total - sum));
+        const product = sum * (total - sum);
+
+        if (product > max) {
+            max = product;
+        }
     }
 
-    return max % MOD;
+    return Number(max % MOD);
 }
 ```
 
