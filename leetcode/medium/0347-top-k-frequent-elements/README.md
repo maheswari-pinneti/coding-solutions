@@ -42,9 +42,9 @@ Given an integer array `nums` and an integer `k`, return  *the*  `k`  *most freq
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms  
-**Memory:** 53.3 MB  
-**Submitted:** 2026-09-07T14:22:47.482Z  
+**Runtime:** 20 ms (beats 24.62%)  
+**Memory:** 62.2 MB (beats 41.06%)  
+**Submitted:** 2026-09-07T14:22:51.911Z  
 
 ```ts
 function topKFrequent(nums: number[], k: number): number[] {
