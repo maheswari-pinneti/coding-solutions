@@ -36,9 +36,9 @@ Output: 9
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms  
-**Memory:** 55.7 MB  
-**Submitted:** 2026-09-07T14:20:51.959Z  
+**Runtime:** 1 ms (beats 63.87%)  
+**Memory:** 57 MB (beats 63.48%)  
+**Submitted:** 2026-09-07T14:20:58.595Z  
 
 ```ts
 function trap(height: number[]): number {
