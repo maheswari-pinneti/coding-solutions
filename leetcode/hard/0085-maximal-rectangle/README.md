@@ -45,9 +45,9 @@ Output: 1
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms  
-**Memory:** 53.8 MB  
-**Submitted:** 2026-09-07T14:21:48.211Z  
+**Runtime:** 11 ms (beats 58.33%)  
+**Memory:** 60.9 MB (beats 61.67%)  
+**Submitted:** 2026-09-07T14:21:55.369Z  
 
 ```ts
 function maximalRectangle(matrix: string[][]): number {
