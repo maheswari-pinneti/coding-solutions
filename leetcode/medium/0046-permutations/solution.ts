@@ -3,8 +3,8 @@ function permute(nums: number[]): number[][] {
     const current: number[] = [];
     const used: boolean[] = new Array(nums.length).fill(false);
 
-    function backtrack(): void {
-        // A complete permutation is formed
+    function backtrack() {
+        // We have used every number
         if (current.length === nums.length) {
             result.push([...current]);
             return;
@@ -15,8 +15,8 @@ function permute(nums: number[]): number[][] {
             if (used[i]) continue;
 
             // Choose
-            current.push(nums[i]);
             used[i] = true;
+            current.push(nums[i]);
 
             // Explore
             backtrack();
