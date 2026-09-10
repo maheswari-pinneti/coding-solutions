@@ -43,9 +43,9 @@ Output: [[1]]
 ## Solution
 
 **Language:** TypeScript  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 61.1 MB (beats 31.57%)  
-**Submitted:** 2026-09-09T18:03:17.406Z  
+**Runtime:** 1 ms (beats 87.34%)  
+**Memory:** 58.5 MB (beats 98.88%)  
+**Submitted:** 2026-09-10T17:32:28.272Z  
 
 ```ts
 function permute(nums: number[]): number[][] {
@@ -53,8 +53,8 @@ function permute(nums: number[]): number[][] {
     const current: number[] = [];
     const used: boolean[] = new Array(nums.length).fill(false);
 
-    function backtrack(): void {
-        // A complete permutation is formed
+    function backtrack() {
+        // We have used every number
         if (current.length === nums.length) {
             result.push([...current]);
             return;
@@ -65,8 +65,8 @@ function permute(nums: number[]): number[][] {
             if (used[i]) continue;
 
             // Choose
-            current.push(nums[i]);
             used[i] = true;
+            current.push(nums[i]);
 
             // Explore
             backtrack();
